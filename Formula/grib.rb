@@ -2,28 +2,28 @@
 class Grib < Formula
   desc "Tunnel client for grib.cloud — expose local services to the internet"
   homepage "https://grib.cloud"
-  version "0.20.6"
+  version "0.20.7"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://api.grib.cloud/api/v1/releases/download/darwin/arm64"
-      sha256 "45e73f37402a6a11e9f9f563b54c359564fb91d18fe0128437670fe007ca7706"
+      sha256 "34df0faaf08748afe002dc7cc95123f13ca27c65de3606fe62dd1f8f30c1427d"
     end
     on_intel do
       url "https://api.grib.cloud/api/v1/releases/download/darwin/amd64"
-      sha256 "1c3676e0e0923e6796227a2568c4ce76739027d46c34b56223a05f707a806daa"
+      sha256 "4df6e043fb2963aeef4a98cd7046946dde7f35ca2ad583786bae5bdd8a27e45f"
     end
   end
 
   on_linux do
     on_arm do
       url "https://api.grib.cloud/api/v1/releases/download/linux/arm64"
-      sha256 "856f0c9d4a1934bc0efdfde0eb41ca1e0e48182baa7aacae3ad382be7a06c3d1"
+      sha256 "796b6652731327f9d9a953c117eef0fbc292992bca08c16a49da6765dff8781d"
     end
     on_intel do
       url "https://api.grib.cloud/api/v1/releases/download/linux/amd64"
-      sha256 "573bab2bd9315e1040b1b7ea233c8bdc0fe3794de43db697d0192427c0c99233"
+      sha256 "6db2b9df5c5bd7f6f8550b2434b5ec8d66ed5e60bf5b575f9568ae8aa30e0f31"
     end
   end
 
