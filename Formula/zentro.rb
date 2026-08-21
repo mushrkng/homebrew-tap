@@ -1,9 +1,6 @@
-# scripts/homebrew/grib.rb
-# Legacy formula kept for existing installs. New installs: `brew install zentro`.
-# The release archive ships both `zentro` and `grib` binaries; this formula
-# installs the legacy-named one so `brew upgrade grib` keeps working.
-class Grib < Formula
-  desc "Tunnel client for Zentro (formerly Grib) — renamed, install `zentro` instead"
+# scripts/homebrew/zentro.rb
+class Zentro < Formula
+  desc "Tunnel client for Zentro — expose local services to the internet"
   homepage "https://zentro.sh"
   version "0.22.0"
   license "MIT"
@@ -31,18 +28,10 @@ class Grib < Formula
   end
 
   def install
-    bin.install "grib"
-  end
-
-  def caveats
-    <<~EOS
-      Grib has been renamed to Zentro. This formula still works, but new
-      installs should use:
-        brew install mushrkng/tap/zentro
-    EOS
+    bin.install "zentro"
   end
 
   test do
-    assert_match "grib v", shell_output("#{bin}/grib version")
+    assert_match "zentro v", shell_output("#{bin}/zentro version")
   end
 end
